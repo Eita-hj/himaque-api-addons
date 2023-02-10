@@ -10,7 +10,7 @@ const client = new Client({
 const SC = require("@himaque-api/SpamChecker")
 const sc = new SC({
   client,
-  maxCount: 10 //指定時間内にこの回数以上の発言をするとスパム判定をする
+  maxCount: 10, //指定時間内にこの回数以上の発言をするとスパム判定をする
   reserInterval: 10000 //この時間で指定回数以上の発言をするとスパム判定になる
 })
 
