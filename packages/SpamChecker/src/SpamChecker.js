@@ -2,8 +2,8 @@ const { EventEmitter } = require("node:events");
 module.exports = class SpamChecker extends EventEmitter {
   constructor(option) {
     super()
-    if (!client) throw Error("SpamCheckerConstructor.client is required.")
     const { client, maxCount, resetInterval } = option;
+    if (!client) throw Error("SpamCheckerConstructor.client is required.")
     if (!client.addons) client.addons = {};
     this.setting = {
       maxCount: maxCount || 10,
