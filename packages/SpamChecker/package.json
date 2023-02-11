@@ -1,6 +1,6 @@
 {
-  "name": "@himaqueapi/spamchecker",
-  "version": "1.0.0",
+  "name": "himaque-api-spamchecker",
+  "version": "1.0.1",
   "description": "himaque-apiのメッセージ連投検知機能",
   "main": "./src/index.js",
   "scripts": {
