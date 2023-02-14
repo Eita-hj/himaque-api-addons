@@ -35,10 +35,10 @@ module.exports = class SpamChecker extends EventEmitter {
     this.client.off(t, this.check);
   }
   check(message) {
-    const type = message.shout ? "Area" : message.guild ? "Guild" : "Direct";
-    if (type === "Direct" && !message.at)
+    const type = message.at ? "Direct" : message.guild ? "Guild" : "Area";
+    if (type === "Area" && !("shout" in message))
       throw new Error("Unknown message type");
-    const client = this
+    const client = this;
     client.addons.SpamChecker.checks[type].push(message.author.id);
     setTimeout(
       (() => client.addons.SpamChecker.checks[type].shift()),
